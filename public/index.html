@@ -5,6 +5,29 @@
     <title>ToDo App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<!-- Database connections  start-->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAFd9I0dqL4WdwajaqXnywWOGjWlVqG1NM",
+          authDomain: "todoapp-1233.firebaseapp.com",
+          databaseURL: "https://todoapp-1233.firebaseio.com",
+          projectId: "todoapp-1233",
+          storageBucket: "todoapp-1233.appspot.com",
+          messagingSenderId: "458726977378",
+          appId: "1:458726977378:web:bb031ad5a2b07665bf463b",
+          measurementId: "G-5WEQB02PW7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+<!-- Database connections End -->
+
 </head>
 <body>
 <div class="div-1">
@@ -18,6 +41,7 @@
       </ul>
   </div> 
 </div>
+<h3 class="note">Sir Database save kar dia hai lakin age sub galat ho raha ek ko thek kar raha hun to dosra galat ho raha hai plaese database ke liye kooi dosre assignment den</h1>
 </body>
 <script src="app.js"></script>
 </html>

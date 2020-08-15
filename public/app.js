@@ -1,5 +1,8 @@
 var list=document.getElementById('list')
+
 function todo(){
+   
+
 var Todo=document.getElementById('C_Todo')
     // li
     if(Todo.value==" "){
@@ -10,6 +13,11 @@ var li=document.createElement('li')
 var text=document.createTextNode(Todo.value)
 text.value
 li.appendChild(text)
+
+ // firebase database
+    firebase.database().ref('ToDo/').push(Todo.value)
+//firebase dtabase end here
+
 // crate btns
 // delte btn
 var dlt=document.createElement('button')
@@ -22,7 +30,7 @@ var edit=document.createElement('button')
 var edittext=document.createTextNode('Edit')
 edit.setAttribute('onclick','editBtn(this)')
 edit.setAttribute('class','rounded btn btn-outline-success')
-console.log(edit)
+
 
 edit.appendChild(edittext)
 
@@ -32,7 +40,7 @@ li.appendChild(edit)
 var ul=document.getElementById('ul')
 ul.appendChild(li)
     }
-Todo.value=" "
+Todo.value=""
 }
 
 function dltall(){
